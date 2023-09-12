@@ -3168,9 +3168,9 @@ void CompileTask::ModifyRequestCWDAndPWD() {
 
   const char fixed_cwd[] =
 #ifdef _WIN32
-      "C:\\this\\path\\is\\set\\by\\goma";
+      "C:\\this\\path\\is\\set\\by\\goma\\to\\make\\a\\deep\\tree";
 #else
-      "/this/path/is/set/by/goma";
+      "/this/path/is/set/by/goma/to/make/a/deep/tree";
 #endif
 
   if (req_->cwd() == fixed_cwd) {
