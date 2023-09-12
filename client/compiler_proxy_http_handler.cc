@@ -174,10 +174,6 @@ CompilerProxyHttpHandler::CompilerProxyHttpHandler(std::string myname,
   // TODO: clean up flags.
   //                    I believe we do not need three flags for the feature.
   if (FLAGS_ARBITRARY_TOOLCHAIN_SUPPORT) {
-#ifdef __MACH__
-    LOG(FATAL)
-        << "arbitrary toolchain support feature is not available on mac.";
-#endif
     FLAGS_SEND_EXPECTED_OUTPUTS = true;
     FLAGS_SEND_COMPILER_BINARY_AS_INPUT = true;
     FLAGS_USE_USER_SPECIFIED_PATH_FOR_SUBPROGRAMS = true;
